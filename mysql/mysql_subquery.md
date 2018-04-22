@@ -21,9 +21,11 @@
 例如：
 
 1.学生成绩为60分到90分之间的有哪些？
+
 ```where scores between 60 and 90```
 
 2.查找学生姓王的学生？
+
 ```where name like '王%'```
 
 ### group by（分组）
@@ -49,6 +51,7 @@ select avg(age) as avg_age from student;
 
 例如：
 查询学生的成绩，并按照降序排列
+
 ```select name,score from scores order by score desc;```
 
 ### if（判断）
@@ -74,6 +77,7 @@ select name from scores limit 3,3;
 
 例如：
 不适用排序，找出最高分的学生姓名和成绩
+
 ```select name,score from scores where score = (select max(score) from scores);```
 
 - from型子查询
@@ -81,12 +85,14 @@ select name from scores limit 3,3;
 
 例如：
 不用group by，查询平均成绩大于等于90分的学生的学号和平均成绩：
+
 ```select ts1.stuid,t2.avg from tbstudent ts1,(select sid,avg(score) as avg from tbsc group by(sid)) as t2 where t2.sid=ts1.stuid and t2.avg>=90;```
 
 - exists型子查询
 把外层查询结果拿到内层，看内层的查询是否成立
 
 例如：查询哪些栏目下有商品，栏目表category,商品表goods
+
 ```select cat_id,cat_name from category where exists(select * from goods where goods.cat_id = category.cat_id);```
 
 ### 联接
@@ -111,76 +117,102 @@ c) 右外连接：Right Outer Jion on 作用：其中outer可以省略，而RIGH
 习题如下：
 
 1.查询所有学生信息：
+
 ```select * from tbstudent;```
 
 2.查询所有课程名称及学分
+
 ```select cosname,sum(coscredit) from tbcourse join tbsc on tbcourse.cosid=tbsc.cid group by(tbcourse.cosname);```
 
 3.查询所有女学生的姓名和出生日期（筛选）
+
 ```select stuname,stubirth from tbstudent where stusex=0;```
 
 4.查询所有80后学生的姓名、性别和出生日期（筛选）
+
 ```select stuname,stusex,stubirth from tbstudent where stubirth between '1980-1-1' and '1990-1-1';```
 
 5.查询姓王的学生姓名和性别（模糊）
+
 ```select stuname,stusex from tbstudent where stuname like '王%';```
 
 6.查询姓郭名字总共两个字的学生的姓名（模糊）
+
 ```select stuname from tbstudent where stuname like '郭_';```
 
 7.查询姓郭名字总共三个字的学生的姓名（模糊）
+
 ```select stuname from tbstudent where stuname like '郭_';```
 
 8.查询名字中有王字的的学生的姓名（模糊）
+
 ```select stuname from tbstudent where stuname like '%王%';```
 
 9.查询没有录入家庭住址和照片的学生姓名（多条件筛选和空值处理）
+
 ```select stuname from tbstudent where stuaddr is null and stuphoto is null;```
 
 10.查询学生选课的所有日期（去重）
+
 ```select distinct(scdate) from tbsc;```
 
 11.查询学生的姓名和生日按年龄从大到小排列（排序）
+
 ```select stuname,stubirth from tbstudent order by(stubirth);```
 
 12.查询所有录入了家庭住址的男学生的姓名、出生日期和家庭住址按年龄从小到大排列（多条件筛选和排序）
+
 ```select stuname,stubirth,stuaddr from tbstudent where stuaddr is not null and stusex=1 order by(stubirth);```
 
 13.查询年龄最大的学生的出生日期（聚合函数）
+
 ```select stuname,stubirth from tbstudent where stubirth=(select min(stubirth) from tbstudent);```
 
 14.查询年龄最小的学生的出生日期（聚合函数）
+
 ```select stuname,stubirth from tbstudent where stubirth=(select max(stubirth) from tbstudent);```
 
 15.查询男女学生的人数（分组和聚合函数）
+
 ```select stusex,count(stusex) from tbstudent group by(stusex);```
 
 16.查询课程编号为1111的课程的平均成绩（筛选和聚合函数）
+
 ```select cid,ifnull(avg(score), 0) from tbsc group by(cid);```
 
 17.查询学号为1001的学生的所有课程的总成绩（筛选和聚合函数）
+
 ```select sid,sum(score) from tbsc where sid=1001;```
 
 18.查询每个学生的学号和平均成绩，null值处理为0（分组和聚合函数）
+
 ```select stuid,ifnull(c.avg,0) from tbstudent t left join (select sid,avg(tbsc.score) as avg from tbsc group by(sid)) as c on c.sid=t.stuid;```
 
 19.查询平均成绩大于等于90分的学生的学号和平均成绩
+
 ```select ts1.stuid,t2.avg from tbstudent ts1,(select sid,avg(score) as avg from tbsc group by(sid)) as t2 where t2.sid=ts1.stuid and t2.avg>=90;```
+
 或者
+
 ```select sid,avg(score) as avg from tbsc group by(sid) having avg(score)>=90;```
 
 20.查询年龄最大的学生的姓名
+
 ```select t1.stuname from tbstudent t1 where t1.stubirth=(select min(stubirth) from tbstudent);```
 
 21.查询选了两门以上的课程的学生姓名
+
 ```select t1.stuname,t1.stuid from tbstudent t1 join (select sid,count(cid) as count from tbsc group by(sid)) as t on t.sid=t1.stuid and t.count>=2;```
 
 22.查询选课学生的姓名和 平均成绩
+
 ```select t1.stuname,ifnull(t2.avg,0) from tbstudent t1 join (select sid,avg(score) as avg from tbsc group by(sid)) as t2 on t1.stuid=t2.sid;```
 
 23.查询学生姓名、所选课程名称和成绩
+
 ```select t1.stuname,t2.cosname,ifnull(t3.score,0) from tbstudent t1 join tbsc t3 on t1.stuid=t3.sid join tbcourse t2 on t2.cosid=t3.cid;```
 
 24.查询每个学生的姓名和选课数量
+
 ```select t1.stuname,ifnull(t2.count,0) from tbstudent t1 left join (select sid,count(cid) as count from tbsc group by(sid)) as t2 on t1.stuid=t2.sid;```
 
