@@ -85,6 +85,7 @@ c) 右外连接：Right Outer Jion on 作用：其中outer可以省略，而RIGH
 
 ### 练习：
 以前一篇[MariaDB基础](https://www.jianshu.com/p/1078c79bc558)中的练习题创建的数据库为基础
+
 ![tbcourse表](https://upload-images.jianshu.io/upload_images/10930505-1ec8170418a6e22a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![tbsc表](https://upload-images.jianshu.io/upload_images/10930505-5ab6a2577937a63a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
