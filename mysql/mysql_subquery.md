@@ -10,6 +10,7 @@
 ### mysql查询子句
 
 #### where（条件查询）
+
 在where条件查询中可以使用比较运算符，逻辑运算符，in,between  and和模糊查询：
 - 比较运算符包括：>, =, <, >=, <=, !=
 - 逻辑运算符：and, or, not
@@ -34,6 +35,7 @@
 select name,avg(score) as c from scores group by(name) having c >70;
 ```
 ### as（别名）
+
 对于一些名字比较长的字段或者表名，我们可以给它一个比较简短且全局唯一的别名，然后通过别名去引用它（查询语句也可以做别名）。
 
 例如：
@@ -50,6 +52,7 @@ select avg(age) as avg_age from student;
 ```select name,score from scores order by score desc;```
 
 ### if（判断）
+
 if(字段,exp1,exp2) 或者 ifnull(字段,exp1,,exp2) 作用：if表达式中如果字段值为真则返回exp1的值，如果为假的话，返回exp2的值     ifnull表达式中如果字段的值为假则返回exp1的值，如果为假的话，返回exp2的值。
 
 例如： 查询男女学生的人数(分组和聚合函数)
