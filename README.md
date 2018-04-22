@@ -2,20 +2,6 @@
 
 - [git命令](git/git-cmd.md)
 
-- [mysql](mysql)
-
-	[mysql子查询](mysql/mysql_subquery.md)
-
-	[MariaDB数据库](mysql/MariaDB.md)
-
-- [linux](linux)
-
-	[linux简介](linux/linux_basis.md)
-
-	[linux常用命令](linux/linux_command.md)
-
-	[hexo快速生成静态页面](linux/hexo.md)
-
 - [python](python)
 
 	[python基础](python/python_basis.md)
@@ -41,3 +27,18 @@
 	[python正则表达式使用](python/use_expression.md)
 
 	[python操作文件](python/python_file.md)
+
+- [mysql](mysql)
+
+	[mysql子查询](mysql/mysql_subquery.md)
+
+	[MariaDB数据库](mysql/MariaDB.md)
+
+- [linux](linux)
+
+	[linux简介](linux/linux_basis.md)
+
+	[linux常用命令](linux/linux_command.md)
+
+	[hexo快速生成静态页面](linux/hexo.md)
+

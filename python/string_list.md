@@ -332,6 +332,7 @@ del dict2         # 删除字典
 ### 列表中的常用的方法
 
 Python字典包含了以下内置方法：
+
 ![字典常用方法](http://upload-images.jianshu.io/upload_images/10930505-c51b1ffae2a48aa6..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 练习1：文字跑马灯
