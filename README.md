@@ -42,3 +42,6 @@
 
 	[hexo快速生成静态页面](linux/hexo.md)
 
+- [Django](Django)
+
+	[Django入门](Django/django_basis.md)
