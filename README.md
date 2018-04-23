@@ -45,3 +45,4 @@
 - [Django](Django)
 
 	[Django入门](Django/django_basis.md)
+	[Django视图和模型](Django/django1.md)
