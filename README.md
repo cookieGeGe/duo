@@ -48,4 +48,4 @@
 
 	[Django视图和模型入门](Django/django1.md)
 
-	[Django模型详解](Django/django1_admin.md)
+	[Django后台管理](Django/django_admin.md)
