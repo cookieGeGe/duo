@@ -1,4 +1,4 @@
-## Django视图和模型
+## Django视图和模型入门
 
 ### 创建项目helloworld1
 
