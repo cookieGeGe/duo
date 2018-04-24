@@ -46,4 +46,6 @@
 
 	[Django入门](Django/django_basis.md)
 
-	[Django视图和模型](Django/django1.md)
+	[Django视图和模型入门](Django/django1.md)
+
+	[Django模型详解](Django/django1_admin.md)
