@@ -49,3 +49,5 @@
 	[Django视图和模型入门](Django/django1.md)
 
 	[Django后台管理](Django/django_admin.md)
+
+	[Django ORM](Django/django_orm.md)
