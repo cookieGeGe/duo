@@ -51,3 +51,5 @@
 	[Django后台管理](Django/django_admin.md)
 
 	[Django ORM](Django/django_orm.md)
+
+	[Django 模型对应关系](Django/django_models.md)
