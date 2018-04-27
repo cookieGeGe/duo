@@ -10,6 +10,8 @@
 
 ![登录成功界面](https://i.imgur.com/99H7yjJ.png)
 
+>**注意：**修改用户密码使用：```python manage.py changepassword username```
+
 这里默认是没有任何数据模型的，如果要通过Django后台去管理某个数据模型，还需要注册该数据模型到 admin 中。这里以注册 stu 模型为例，去修改 stu 模型下的 admin.py 来实现注册，代码如下：
 
 ```
