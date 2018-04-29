@@ -53,3 +53,5 @@
 	[Django ORM](Django/django_orm.md)
 
 	[Django 模型对应关系](Django/django_models.md)
+
+	[Django URL路由进阶](Django/django_url.md)
