@@ -409,7 +409,7 @@ ALLOWED_HOSTS = ['*']
 
 ```
 def page_not_found(request):
-    return HttpResponse('<h1>404错误</p>')
+    return HttpResponse('<p>404错误</p>')
 
 
 def server_error(request):
