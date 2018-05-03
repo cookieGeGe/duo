@@ -59,3 +59,5 @@
 	[Django 上传文件](Django/django_pic.md)
 
 	[Django 中间件](Django/django_middleware.md)
+
+	[Django 分页](Django/django_page.md)
