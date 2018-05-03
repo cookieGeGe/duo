@@ -57,3 +57,5 @@
 	[Django URL路由进阶](Django/django_url.md)
 
 	[Django 上传文件](Django/django_pic.md)
+
+	[Django 中间件](Django/django_middleware.md)
