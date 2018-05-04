@@ -61,3 +61,5 @@
 	[Django 中间件](Django/django_middleware.md)
 
 	[Django 分页](Django/django_page.md)
+
+	[Django 日志](Django/django_log.md)
