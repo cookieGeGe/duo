@@ -189,6 +189,7 @@ def login(request):
 
 ![存储的日志记录](https://i.imgur.com/QkzmPqe.png)
 
+>注意：在定义formatters/handlers/loggers的时候其中的关键字是固定的，在写的时候需要注意
 
 参考自：
 [http://blog.51cto.com/davidbj/1433741](http://blog.51cto.com/davidbj/1433741)
