@@ -109,3 +109,6 @@ REST这个词，是Roy Thomas Fielding在他2000年的博士论文中提出的�
 	{
 	    error: "返回的错误信息"
 	}
+
+
+参考自：[http://www.ruanyifeng.com/blog/2014/05/restful_api.html](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
