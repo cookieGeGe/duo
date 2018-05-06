@@ -63,3 +63,5 @@
 	[Django 分页](Django/django_page.md)
 
 	[Django 日志](Django/django_log.md)
+
+	[Django RESTful架构及设计入门](Django/django_restful.md)
