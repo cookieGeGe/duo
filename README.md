@@ -67,3 +67,5 @@
 	[Django - RESTful 架构及设计入门](Django/django_restful.md)
 
 	[Django - RESTful 使用指南之一](Django/django_restful_use1.md)
+
+	[Django - RESTful 使用指南之一](Django/Django_rest_framework_ser.md)
